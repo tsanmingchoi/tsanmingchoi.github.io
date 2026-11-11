@@ -84,9 +84,17 @@ the start year, the Scholar ID, the ORCID, and titles or venues to always skip.
 
 Limits to know:
 
-- Google has no official Scholar API and sometimes blocks automated requests from GitHub's servers.
-  When that happens the run still adds papers from OpenAlex and simply keeps last week's citation
-  numbers. Nothing breaks.
+- Google has no official Scholar API and often blocks automated requests from GitHub's servers.
+  The sync retries, and when it is still blocked it keeps the last citation numbers, adds papers
+  from OpenAlex only, and marks the run with a yellow warning on the Actions tab. The site always
+  shows the date of the numbers ("Google Scholar figures as of …"), and `content/sync_status.json`
+  records each run's outcome.
+- **For reliable weekly Scholar updates**, add a SerpAPI key: create a free account at
+  <https://serpapi.com> (the free plan covers a weekly run), copy the API key, then in the repository
+  go to Settings → Secrets and variables → Actions → *New repository secret*, name it `SERPAPI_KEY`
+  and paste the key. The sync uses it only when Google blocks the direct read.
+- Running `python scripts/sync_publications.py` on your own computer (then committing and pushing)
+  also works, because Google rarely blocks home connections.
 - New papers appear in OpenAlex and Scholar a few days to a few weeks after publication.
 - The sync guesses the category from the journal name (UTD24/FT50, ABS 4*, other). He can change
   the category of any entry in the editor.

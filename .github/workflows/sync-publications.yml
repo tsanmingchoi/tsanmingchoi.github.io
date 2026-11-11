@@ -19,6 +19,9 @@ jobs:
           python-version: "3.12"
       - name: Fetch new publications and metrics
         run: python scripts/sync_publications.py
+        env:
+          # Optional: a SerpAPI key (repository secret) used only when Google Scholar blocks GitHub
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
       - name: Save changes
         run: |
           if [ -n "$(git status --porcelain content)" ]; then

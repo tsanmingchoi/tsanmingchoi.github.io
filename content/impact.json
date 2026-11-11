@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "value": "41,448",
+      "value": "41,784",
       "label": "Google Scholar citations"
     },
     {
@@ -9,7 +9,7 @@
       "label": "Google Scholar h-index"
     },
     {
-      "value": "376",
+      "value": "379",
       "label": "Google Scholar i10-index"
     },
     {
@@ -113,5 +113,5 @@
       "caption": ""
     }
   ],
-  "metrics_updated": "October 2026"
+  "metrics_updated": "11 November 2026"
 }

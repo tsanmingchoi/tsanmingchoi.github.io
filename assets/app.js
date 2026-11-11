@@ -58,6 +58,7 @@ function renderHero({ profile: p }) {
 function renderStrip({ profile: p, impact }) {
   $("metrics").innerHTML = impact.metrics.map((m, i) =>
     `<div class="reveal" style="--stagger:${i}"><dt data-count="${esc(m.value)}">0</dt><dd>${esc(m.label)}</dd></div>`).join("");
+  $("metrics-note").textContent = impact.metrics_updated ? `Google Scholar figures as of ${impact.metrics_updated}` : "";
   $("honours").innerHTML = (p.honours || []).map((h, i) =>
     `<div class="honour reveal" style="--stagger:${i}"><span>${esc(h.role)}</span><strong>${esc(h.outlet)}</strong></div>`).join("");
 }

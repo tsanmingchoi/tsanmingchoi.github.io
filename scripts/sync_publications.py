@@ -125,17 +125,35 @@ def from_openalex(orcid, from_year):
                 details += f", {bib['first_page']}" + (f"-{bib['last_page']}" if bib.get("last_page") else "")
         title = html.unescape(re.sub(r"<[^>]+>", "", w["title"]))
         doi = (w.get("doi") or "").replace("https://doi.org/", "")
-        citation = f"{', '.join(names)} ({w['publication_year']}). {title}. {journal}"
+        citation = f"{', '.join(names)} ({w['publication_year']}). {sentence(title)} {journal}"
         citation += f", {details}." if details else (", published online." if journal else ".")
         found.append({"title": title, "doi": doi, "year": w["publication_year"], "journal": journal,
                       "citation": citation, "kind": w["type"], "source": "openalex"})
     return found
 
 
-def from_scholar(user, from_year):
-    page = get(f"https://scholar.google.com/citations?user={user}&hl=en&sortby=pubdate&pagesize=100")
-    if "gsc_a_at" not in page:
-        raise RuntimeError("Google Scholar returned no publication rows (likely blocked)")
+def sentence(title):
+    """Title followed by a full stop, unless it already ends with ? ! or ."""
+    title = title.strip()
+    return title if title[-1:] in "?!." else title + "."
+
+
+def from_scholar(user, from_year, attempts=3):
+    """Read the Scholar profile page directly. Google often blocks data-centre servers
+    (such as GitHub's), so retry a few times before giving up."""
+    url = f"https://scholar.google.com/citations?user={user}&hl=en&sortby=pubdate&pagesize=100"
+    for n in range(attempts):
+        try:
+            page = get(url)
+            if "gsc_a_at" in page:
+                break
+            reason = "no publication rows (blocked or CAPTCHA page)"
+        except Exception as e:
+            reason = str(e)
+        if n < attempts - 1:
+            time.sleep(20 * (n + 1))
+    else:
+        raise RuntimeError(f"Google Scholar blocked the request: {reason}")
     stats = re.findall(r'class="gsc_rsb_std">(\d+)<', page)
     metrics = {"citations": stats[0], "h": stats[2], "i10": stats[4]} if len(stats) >= 6 else None
     found = []
@@ -151,9 +169,47 @@ def from_scholar(user, from_year):
         journal = re.split(r"\s+\d", venue)[0].strip(" ,")
         t = clean(title.group(1))
         found.append({"title": t, "doi": "", "year": int(year.group(1)), "journal": journal,
-                      "citation": f"{authors} ({year.group(1)}). {t}. {venue}.", "kind": "article",
-                      "source": "scholar"})
+                      "citation": f"{authors} ({year.group(1)}). {sentence(t)} {sentence(venue)}",
+                      "kind": "article", "source": "scholar"})
     return found, metrics
+
+
+def from_serpapi(key, user, from_year):
+    """Same data through SerpAPI's Google Scholar Author API, which is not blocked.
+    Used only when the SERPAPI_KEY secret is set and the direct read failed."""
+    q = urllib.parse.urlencode({"engine": "google_scholar_author", "author_id": user, "hl": "en",
+                                "sort": "pubdate", "num": 100, "api_key": key})
+    data = get(f"https://serpapi.com/search.json?{q}", as_json=True)
+    if data.get("error"):
+        raise RuntimeError(f"SerpAPI: {data['error']}")
+    table = {k: v for row in (data.get("cited_by") or {}).get("table", []) for k, v in row.items()}
+    metrics = None
+    if {"citations", "h_index", "i10_index"} <= table.keys():
+        metrics = {"citations": table["citations"]["all"], "h": str(table["h_index"]["all"]),
+                   "i10": str(table["i10_index"]["all"])}
+    found = []
+    for a in data.get("articles", []):
+        year = str(a.get("year") or "")
+        if not (a.get("title") and year.isdigit()) or int(year) < from_year:
+            continue
+        venue = a.get("publication", "")
+        journal = re.split(r"\s+\d", venue)[0].strip(" ,")
+        found.append({"title": a["title"], "doi": "", "year": int(year), "journal": journal,
+                      "citation": f"{a.get('authors', '')} ({year}). {sentence(a['title'])} {sentence(venue or journal)}",
+                      "kind": "article", "source": "scholar"})
+    return found, metrics
+
+
+def doi_for(title, year):
+    """Find a DOI on Crossref for a paper Scholar listed without one (exact title match only)."""
+    q = urllib.parse.urlencode({"query.bibliographic": title, "rows": 3, "select": "DOI,title",
+                                "filter": f"from-pub-date:{year - 1}"})
+    for item in get(f"https://api.crossref.org/works?{q}", as_json=True)["message"]["items"]:
+        found = (item.get("title") or [""])[0]
+        a, b = tokens(title), tokens(found)
+        if a and b and len(a & b) / max(len(a), len(b)) >= 0.9:
+            return item["DOI"]
+    return ""
 
 
 def fmt(n):
@@ -171,18 +227,41 @@ def main():
     skip_venues = [v.lower() for v in cfg.get("exclude_venues", [])]
     candidates, notes = [], []
 
+    status = {"last_run": dt.date.today().isoformat()}
     try:
         candidates += from_openalex(cfg["orcid"], from_year)
+        status["openalex"] = "ok"
     except Exception as e:  # keep going with Scholar
+        status["openalex"] = f"failed: {e}"
         notes.append(f"OpenAlex failed: {e}")
 
     metrics = None
     try:
         time.sleep(1)
         found, metrics = from_scholar(cfg["scholar_id"], from_year)
-        candidates += found
+        status["google_scholar"] = "ok (direct)"
     except Exception as e:
-        notes.append(f"Google Scholar skipped: {e}")
+        found, status["google_scholar"] = [], f"blocked: {e}"
+        key = os.environ.get("SERPAPI_KEY", "").strip()
+        if key:
+            try:
+                found, metrics = from_serpapi(key, cfg["scholar_id"], from_year)
+                status["google_scholar"] = "ok (SerpAPI fallback)"
+            except Exception as e2:
+                status["google_scholar"] += f"; SerpAPI also failed: {e2}"
+    candidates += found
+    if not status["google_scholar"].startswith("ok"):
+        notes.append(f"Google Scholar skipped: {status['google_scholar']}")
+        # Shows as a yellow warning on the GitHub Actions run instead of a silent success
+        print(f"::warning::Google Scholar not updated this week ({status['google_scholar']}). "
+              "Citation numbers on the site keep their last value.")
+
+    for c in candidates:
+        if c["source"] == "scholar" and not c["doi"]:
+            try:
+                c["doi"] = doi_for(c["title"], c["year"])
+            except Exception:
+                pass  # the paper is still added, just without a DOI link
 
     added = []
     for c in candidates:
@@ -210,20 +289,22 @@ def main():
     if added:
         save("publications.json", added + pubs)
 
+    impact = load("impact.json")
     if metrics and cfg.get("update_metrics", True):
-        impact = load("impact.json")
         new_values = {"Google Scholar citations": fmt(metrics["citations"]),
-                      "Google Scholar h-index": metrics["h"],
-                      "Google Scholar i10-index": metrics["i10"]}
-        changed = False
+                      "Google Scholar h-index": str(metrics["h"]),
+                      "Google Scholar i10-index": str(metrics["i10"])}
         for m in impact["metrics"]:
-            if m["label"] in new_values and m["value"] != new_values[m["label"]]:
+            if m["label"] in new_values:
                 m["value"] = new_values[m["label"]]
-                changed = True
-        if changed:
-            impact["metrics_updated"] = dt.date.today().strftime("%B %Y")
-            save("impact.json", impact)
-            notes.append("Google Scholar metrics updated")
+        # The site shows this date under the numbers, so it moves even when they do not
+        impact["metrics_updated"] = dt.date.today().strftime("%d %B %Y").lstrip("0")
+        save("impact.json", impact)
+        notes.append("Google Scholar metrics updated")
+
+    status["papers_added"] = len(added)
+    status["citations_as_of"] = impact.get("metrics_updated", "")
+    save("sync_status.json", status)
 
     print(f"Added {len(added)} publication(s)")
     for a in added:

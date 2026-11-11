@@ -1,11 +1,23 @@
 [
   {
     "category": "Other ABS 4* journals",
+    "title": "Safety first: Flight speed control policies for safe and coordinated drone-truck scheduling in densely populated areas",
+    "year": 2026,
+    "citation": "X Sun, Q Li, TM Choi, SH Chung (2026). Safety first: Flight speed control policies for safe and coordinated drone-truck scheduling in densely populated areas. Risk Analysis, 2026.",
+    "journal": "Risk Analysis",
+    "link": "",
+    "source": "scholar",
+    "added": "2026-11-11",
+    "hidden": false,
+    "area": "coordination"
+  },
+  {
+    "category": "Other ABS 4* journals",
     "title": "Can information sharing eliminate greenwashing in supply chains with two-level information asymmetry?",
     "year": 2026,
-    "citation": "S Zhu, Y Xia, J Li, TM Choi (2026). Can information sharing eliminate greenwashing in supply chains with two-level information asymmetry?. International Journal of Production Economics, 2026.",
+    "citation": "S Zhu, Y Xia, J Li, TM Choi (2026). Can information sharing eliminate greenwashing in supply chains with two-level information asymmetry? International Journal of Production Economics, 2026.",
     "journal": "International Journal of Production Economics",
-    "link": "",
+    "link": "https://doi.org/10.1016/j.ijpe.2026.110252",
     "source": "scholar",
     "added": "2026-10-26",
     "hidden": false,
