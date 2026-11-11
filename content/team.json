@@ -5,27 +5,33 @@
       "members": [
         {
           "name": "Daisy Li",
-          "note": "2023-2024"
+          "note": "2023-2024",
+          "linkedin": ""
         },
         {
           "name": "Xuanming Bai",
-          "note": "2024-2025"
+          "note": "2024-2025",
+          "linkedin": ""
         },
         {
           "name": "Nana Liu",
-          "note": "2024-2025"
+          "note": "2024-2025",
+          "linkedin": ""
         },
         {
           "name": "Tanmoy Kundu",
-          "note": "2026"
+          "note": "2026",
+          "linkedin": ""
         },
         {
           "name": "Julianne Cai",
-          "note": "2026-2027"
+          "note": "2026-2027",
+          "linkedin": ""
         },
         {
           "name": "Wendy Zhao",
-          "note": "2026-2027"
+          "note": "2026-2027",
+          "linkedin": ""
         }
       ]
     },
@@ -34,35 +40,43 @@
       "members": [
         {
           "name": "Busra Bayrak",
-          "note": "2023, ULMS"
+          "note": "2023, ULMS",
+          "linkedin": "https://www.linkedin.com/in/bayrakbusra/"
         },
         {
           "name": "Alicia Lin",
-          "note": "2023, ULMS"
+          "note": "2023, ULMS",
+          "linkedin": "https://www.linkedin.com/in/meiting-lin-896491142/"
         },
         {
           "name": "Ivy Liang",
-          "note": "2024, ULMS"
+          "note": "2024, ULMS",
+          "linkedin": "https://www.linkedin.com/in/peiyi-ivy-liang-b145a6282/"
         },
         {
           "name": "Clea Wu",
-          "note": "2024, XJT-Liverpool U"
+          "note": "2024, XJT-Liverpool U",
+          "linkedin": ""
         },
         {
           "name": "Judy Yi",
-          "note": "2024, PolyU"
+          "note": "2024, PolyU",
+          "linkedin": ""
         },
         {
           "name": "Shivani Mishra",
-          "note": "2025, ULMS"
+          "note": "2025, ULMS",
+          "linkedin": "https://www.linkedin.com/in/shivani-mishra-3a246614a/"
         },
         {
           "name": "Hanna Minh Huong Le",
-          "note": "2026, ULMS"
+          "note": "2026, ULMS",
+          "linkedin": "https://www.linkedin.com/in/huong-minh-le/"
         },
         {
           "name": "Liuyi Su",
-          "note": "2026, XJT-Liverpool U"
+          "note": "2026, XJT-Liverpool U",
+          "linkedin": ""
         }
       ]
     },
@@ -71,19 +85,23 @@
       "members": [
         {
           "name": "Hannah Guo",
-          "note": ""
+          "note": "",
+          "linkedin": "https://www.linkedin.com/in/yuhan-guo-202a313aa/"
         },
         {
           "name": "Boru Li",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         },
         {
           "name": "Summer Sun",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         },
         {
           "name": "Claire Wang",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         }
       ]
     },
@@ -92,31 +110,38 @@
       "members": [
         {
           "name": "Yihan Jing",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         },
         {
           "name": "Zhongyun Li",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         },
         {
           "name": "Yumi Ma",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         },
         {
           "name": "Abhinay Mishra",
-          "note": ""
+          "note": "",
+          "linkedin": "https://www.linkedin.com/in/abhinay-mishra-b79b04a8/"
         },
         {
           "name": "Liam Ouyang",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         },
         {
           "name": "Lu Yang",
-          "note": ""
+          "note": "",
+          "linkedin": ""
         },
         {
           "name": "Joey Zhou",
-          "note": ""
+          "note": "",
+          "linkedin": "https://www.linkedin.com/in/jiayu-zhou-2bb2b731a/"
         }
       ]
     }

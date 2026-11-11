@@ -144,18 +144,29 @@ function renderFeatured({ publications }) {
 }
 
 // Research -----------------------------------------------------------------
-function matchesArea(p, keywords) {
-  const t = p.citation.toLowerCase();
-  return keywords.some((k) => {
+function keywordHits(title, keywords) {
+  const t = title.toLowerCase();
+  return keywords.filter((k) => {
     const kk = k.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     return new RegExp(k.length <= 3 ? `\\b${kk}\\b` : `\\b${kk}`).test(t);
-  });
+  }).length;
+}
+
+// Each paper belongs to one area. A hand-set "area" always wins; otherwise the paper
+// title (not the journal or authors) is scored against each area's keywords, and a
+// tie leaves the paper unlisted rather than guessing.
+function areaOf(p, interests) {
+  if (p.area) return p.area;
+  const scores = interests.map((a) => keywordHits(titleOf(p), a.keywords || []));
+  const best = Math.max(...scores);
+  if (!best || scores.filter((s) => s === best).length > 1) return "none";
+  return interests[scores.indexOf(best)].id;
 }
 
 function renderResearch({ research: r, publications }) {
   const pubs = publications.filter((p) => !p.hidden && p.category !== "Books").sort((a, b) => b.year - a.year);
   $("areas").innerHTML = r.interests.map((a, i) => {
-    const mine = pubs.filter((p) => matchesArea(p, a.keywords || []));
+    const mine = pubs.filter((p) => areaOf(p, r.interests) === a.id);
     return `<div class="area reveal" style="--stagger:${i}">
       <span class="area-n">0${i + 1}</span>
       <h3>${esc(a.title)}</h3>
@@ -275,7 +286,12 @@ function setupPubs({ publications: all }) {
 function renderRest({ team, impact, teaching, service, profile: p }) {
   $("team-groups").innerHTML = team.groups.map((g, gi) => `
     <div class="team-group card reveal" style="--stagger:${gi}"><h3>${esc(g.title)} <span class="count">${g.members.length}</span></h3><ul class="chips">
-      ${g.members.map((m) => `<li><span class="ini">${esc(m.name.split(" ").map((w) => w[0]).slice(0, 2).join(""))}</span>${esc(m.name)}${m.note ? `<small>${esc(m.note)}</small>` : ""}</li>`).join("")}
+      ${g.members.map((m) => {
+        const inner = `<span class="ini">${esc(m.name.split(" ").map((w) => w[0]).slice(0, 2).join(""))}</span>${esc(m.name)}${m.note ? `<small>${esc(m.note)}</small>` : ""}`;
+        return /^https:\/\/([a-z]+\.)?linkedin\.com\//i.test(m.linkedin || "")
+          ? `<li class="linked"><a href="${esc(m.linkedin)}" target="_blank" rel="noopener" title="${esc(m.name)} on LinkedIn">${inner}<span class="li-mark" aria-label="LinkedIn">in</span></a></li>`
+          : `<li>${inner}</li>`;
+      }).join("")}
     </ul></div>`).join("");
   const photos = team.photos.map((x) => figure(x)).join("");
   $("team-photos").innerHTML = `<div class="pm-track">${photos}${photos}</div>`;

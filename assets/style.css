@@ -364,6 +364,10 @@ figure.fig figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
 .chips li:nth-child(3n+2) .ini { background: var(--teal); color: #fff; }
 .chips li:nth-child(3n) .ini { background: var(--amber); color: var(--navy); }
 .chips small { color: var(--muted); }
+.chips li.linked { padding: 0; }
+.chips li.linked a { display: flex; align-items: center; gap: 8px; padding: 4px 6px 4px 4px; color: inherit; text-decoration: none; border-radius: 999px; }
+.chips li.linked:hover { border-color: #0a66c2; }
+.li-mark { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 4px; background: #0a66c2; color: #fff; font: 700 11px/1 var(--sans); margin-left: 2px; }
 .photo-marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
 .pm-track { display: flex; gap: 18px; width: max-content; animation: marquee 50s linear infinite; }
 .photo-marquee:hover .pm-track { animation-play-state: paused; }

@@ -203,6 +203,8 @@ def main():
             "source": c["source"],
             "added": dt.date.today().isoformat(),
             "hidden": False,
+            # Left blank: the site guesses the research area from the title until it is set by hand
+            "area": "",
         })
 
     if added:

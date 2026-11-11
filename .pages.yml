@@ -89,6 +89,11 @@ content:
       - { name: journal, label: Journal name (for the filter), type: string }
       - { name: link, label: DOI or link, type: string }
       - { name: hidden, label: Hide from website, type: boolean }
+      - name: area
+        label: Research area (column it appears in on the Research section)
+        type: select
+        options:
+          values: ["tech", "sustainability", "ops-marketing", "coordination", "none"]
 
   - name: research
     label: Research
@@ -101,6 +106,7 @@ content:
         type: object
         list: true
         fields:
+          - { name: id, label: "Area id (tech, sustainability, ops-marketing or coordination; do not change)", type: string }
           - { name: title, label: Title, type: string }
           - { name: description, label: Description, type: text }
           - { name: headline, label: One-line summary, type: string }
@@ -134,6 +140,7 @@ content:
             fields:
               - { name: name, label: Name, type: string }
               - { name: note, label: Note (years, institution), type: string }
+              - { name: linkedin, label: LinkedIn profile URL (optional), type: string }
       - name: photos
         label: Team photos
         type: object
