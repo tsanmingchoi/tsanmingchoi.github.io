@@ -1,5 +1,17 @@
 [
   {
+    "category": "Other selected journals",
+    "title": "Responsible Artificial Intelligence and Data Science: First EAI International Conference, RAIDS 2024, Danang, Vietnam, October 22–24, 2024, Proceedings",
+    "year": 2026,
+    "citation": "Thomassey, S., Tran, K., Vanderhaegen, F., Choi, T. (2026). Responsible Artificial Intelligence and Data Science: First EAI International Conference, RAIDS 2024, Danang, Vietnam, October 22–24, 2024, Proceedings. Lecture notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering, published online.",
+    "journal": "Lecture notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering",
+    "link": "https://doi.org/10.1007/978-3-032-14055-5",
+    "source": "openalex",
+    "added": "2026-11-16",
+    "hidden": false,
+    "area": ""
+  },
+  {
     "category": "Other ABS 4* journals",
     "title": "Safety first: Flight speed control policies for safe and coordinated drone-truck scheduling in densely populated areas",
     "year": 2026,
