@@ -36,18 +36,18 @@ UTD_FT50 = {
     "journal of political economy", "review of economic studies", "harvard business review",
     "mit sloan management review", "journal of business ethics", "human resource management",
 }
+# Journal ranks (ABS rank, FT50 flag) come from the Journal Ranking Finder data.
+# ABS4 below is only a fallback for weeks when that file cannot be downloaded.
+RANKS_URL = "https://mayukhpsm.github.io/journalrankingfinder/journals.json"
 ABS4 = {
     "european journal of operational research", "british journal of management", "risk analysis",
     "international journal of operations & production management",
     "international journal of operations and production management",
-    "transportation research part b: methodological", "transportation research part b methodological",
-    "journal of supply chain management", "decision sciences", "omega", "naval research logistics",
-    "iise transactions", "transportation science", "mathematical programming",
-    "informs journal on computing", "international journal of production economics",
-    "international journal of production research", "ieee transactions on engineering management",
-    "transportation research part e: logistics and transportation review",
-    "transportation research part e logistics and transportation review",
+    "transportation research part b", "transportation research part b: methodological",
+    "transportation research part b methodological",
+    "journal of supply chain management", "transportation science",
 }
+TOP_GROUP, ABS4_GROUP, OTHER_GROUP = "UTD24 / FT50 journals", "Other ABS 4 journals", "Other selected journals"
 KEEP_TYPES = {"article", "review", "book", "book-chapter"}
 # Front matter and notes that are not research papers
 SKIP_TITLE = re.compile(r"best paper award|editorial|corrigendum|erratum|in memoriam|reviewers|"
@@ -91,15 +91,39 @@ def is_known(title, doi, existing):
     return False
 
 
-def category_for(journal, kind):
+def _key(s):
+    return re.sub(r"[^a-z0-9]", "", s.lower().replace("&", "and"))
+
+
+def load_ranks():
+    """Journal Ranking Finder data indexed by normalised title, or None if unavailable."""
+    try:
+        return {_key(j["Journal Title"]): j for j in get(RANKS_URL, as_json=True)["journals"]}
+    except Exception:
+        return None
+
+
+def rank_of(journal, ranks):
+    key = _key(journal)
+    if key in ranks:
+        return ranks[key]
+    # Short forms such as "Transportation Research Part E" match one full title
+    hits = [v for k, v in ranks.items() if len(key) >= 12 and k.startswith(key)]
+    return hits[0] if len(hits) == 1 else None
+
+
+def category_for(journal, kind, ranks=None):
     if kind in ("book", "book-chapter") and not journal:
         return "Books"
     j = journal.lower().strip()
     if j in UTD_FT50:
-        return "UTD24 / FT50 journals"
-    if j in ABS4:
-        return "Other ABS 4* journals"
-    return "Other selected journals"
+        return TOP_GROUP
+    hit = rank_of(journal, ranks) if ranks else None
+    if hit and (hit["ABS Rank"] or hit["FT50"]):
+        if hit["FT50"]:
+            return TOP_GROUP
+        return ABS4_GROUP if hit["ABS Rank"] in ("4", "4*") else OTHER_GROUP
+    return ABS4_GROUP if j in ABS4 else OTHER_GROUP
 
 
 def from_openalex(orcid, from_year):
@@ -263,6 +287,8 @@ def main():
             except Exception:
                 pass  # the paper is still added, just without a DOI link
 
+    ranks = load_ranks()
+    status["journal_ranks"] = "ok" if ranks else "unavailable (used built-in list)"
     added = []
     for c in candidates:
         t = tokens(c["title"])
@@ -273,7 +299,7 @@ def main():
         if is_known(c["title"], c["doi"], pubs + added):
             continue
         added.append({
-            "category": category_for(c["journal"], c["kind"]),
+            "category": category_for(c["journal"], c["kind"], ranks),
             "title": c["title"],
             "year": c["year"],
             "citation": c["citation"],

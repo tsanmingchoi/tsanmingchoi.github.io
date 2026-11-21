@@ -8,11 +8,11 @@
     "link": "https://doi.org/10.1007/978-3-032-14055-5",
     "source": "openalex",
     "added": "2026-11-16",
-    "hidden": false,
+    "hidden": true,
     "area": ""
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "title": "Safety first: Flight speed control policies for safe and coordinated drone-truck scheduling in densely populated areas",
     "year": 2026,
     "citation": "X Sun, Q Li, TM Choi, SH Chung (2026). Safety first: Flight speed control policies for safe and coordinated drone-truck scheduling in densely populated areas. Risk Analysis, 2026.",
@@ -24,7 +24,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other selected journals",
     "title": "Can information sharing eliminate greenwashing in supply chains with two-level information asymmetry?",
     "year": 2026,
     "citation": "S Zhu, Y Xia, J Li, TM Choi (2026). Can information sharing eliminate greenwashing in supply chains with two-level information asymmetry? International Journal of Production Economics, 2026.",
@@ -48,7 +48,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other selected journals",
     "title": "Bundling sales strategies in live-streaming operations: consumer heterogeneity and market information",
     "year": 2026,
     "citation": "Zhao, C., Guo, Z., Yan, K., Choi, T. (2026). Bundling sales strategies in live-streaming operations: consumer heterogeneity and market information. International Journal of Production Research, published online.",
@@ -60,7 +60,7 @@
     "area": "ops-marketing"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other selected journals",
     "title": "A three-tier framework for regulated closed-loop supply chains: Low carbon operations and climate change mitigation",
     "year": 2026,
     "citation": "Bayrak, B., Choi, T., Guo, S.J., Chen, Y. (2026). A three-tier framework for regulated closed-loop supply chains: Low carbon operations and climate change mitigation. International Journal of Production Economics, 296, 109987-109987.",
@@ -72,7 +72,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other selected journals",
     "title": "A Framework for Understanding Blockchain Adoption in Supply Chain Operations: A Multicase Study",
     "year": 2026,
     "citation": "Raj, A., Choi, T., Kumar, R.R., Aggarwal, S. (2026). A Framework for Understanding Blockchain Adoption in Supply Chain Operations: A Multicase Study. IEEE Transactions on Engineering Management, 73, 1390-1401.",
@@ -84,7 +84,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other selected journals",
     "title": "The Retail Platform’s Green Packaging Strategy: The Interplay between Government Tax Policies and Environmentally Conscious Consumers",
     "year": 2026,
     "citation": "S Zhao, Y Zha, X Guo, TM Choi (2026). The Retail Platform’s Green Packaging Strategy: The Interplay between Government Tax Policies and Environmentally Conscious Consumers. International Journal of Production Research 64 (1), 274-293, 2026.",
@@ -108,7 +108,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other selected journals",
     "title": "An Energy-Efficient Coordinated Procurement, Production, and Batch Delivery Scheduling System for Sustainable Operations and Net-Zero Emissions",
     "year": 2026,
     "citation": "S Ahmed, RK Chakrabortty, A Abbasi, TM Choi (2026). An Energy-Efficient Coordinated Procurement, Production, and Batch Delivery Scheduling System for Sustainable Operations and Net-Zero Emissions. Transportation Research Part E: Logistics and Transportation Review, 2026.",
@@ -257,7 +257,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2026,
     "citation": "Zhang, Q., J. Chen, T.M. Choi. Original Equipment Manufacturer’s Sourcing Strategy with Production Cost Information Asymmetry. European Journal of Operational Research, accepted, 2026.",
     "journal": "European Journal of Operational Research",
@@ -265,7 +265,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2026,
     "citation": "Varshney, U., A. Karamchandani, T.M. Choi, T. Kundu, R. Kapoor. Platform Strategies for Luxury Brands Operating in Second-Hand Market under Digital Product Passport Regulation. European Journal of Operational Research, published online, 2026.",
     "journal": "European Journal of Operational Research",
@@ -273,7 +273,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2026,
     "citation": "Saha, T., S. Basu, B. Avittathur, T.M. Choi. Expansion strategies of retail service sharing platform operations with service quality considerations. European Journal of Operational Research, 334, 980-994, Nov 2026.",
     "journal": "European Journal of Operational Research",
@@ -281,7 +281,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2026,
     "citation": "De, A., T. Kundu, J.B. Sheu, T.M. Choi, M. Goswami. Proactive logistics-redistribution strategic planning in response to facility disruptions under contingencies. European Journal of Operational Research, 331(2), 421-440, June 2026.",
     "journal": "European Journal of Operational Research",
@@ -289,7 +289,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2026,
     "citation": "Xu, X., D. Chen, T.C.E. Cheng, T.M. Choi. When should metaverse technology be adopted in live streaming considering consumer returns? European Journal of Operational Research, 330 (2), 487-511, April 2026.",
     "journal": "European Journal of Operational Research",
@@ -297,7 +297,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2026,
     "citation": "Leung, K.H., S. Das, T. Bektas, T.M. Choi. Optimizing delivery systems within the e-retail context: a weighted self-organizing map for real-time delivery region partitioning. European Journal of Operational Research, 330 (1), 100-119, April 2026.",
     "journal": "European Journal of Operational Research",
@@ -305,7 +305,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2026,
     "citation": "Zhang, A., M. Farooque, T.M. Choi, Y. Liu. Individual producer responsibility based product take-back, circular product design, and firm performance. British Journal of Management, 37 (1), e70022, 2026.",
     "journal": "British Journal of Management",
@@ -313,7 +313,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2025,
     "citation": "Biswas, I., D. Pagare, S. Tiwari, T.M. Choi. Managing supply chains facing extreme weather: supplier’s nature and investment. European Journal of Operational Research, 325(3), 457-473, Sep 2025.",
     "journal": "European Journal of Operational Research",
@@ -321,7 +321,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2025,
     "citation": "Xu, X., X. Chen, T.C.E. Cheng, T.M. Choi, Y. Yang. Should blockchain be used to eliminate greenwashing for green and live-streaming platform operations under carbon trading systems? European Journal of Operational Research, 324(3), 1017-1034, Aug 2025.",
     "journal": "European Journal of Operational Research",
@@ -329,7 +329,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2025,
     "citation": "Du, S., X. Sun, L. Hu, T.M. Choi. Does the quantity discount mechanism offer a loophole for retailer collusion? Impacts and responses. European Journal of Operational Research, 323(3), 999-1012, Jun 2025.",
     "journal": "European Journal of Operational Research",
@@ -337,7 +337,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2025,
     "citation": "Zhou, Y., S. Li, T. Kundu, T.M. Choi, J.B. Sheu. Travel bubble policies for low-risk air transport recovery during pandemics. Risk Analysis, 45 (1), 14-39, Jan 2025.",
     "journal": "Risk Analysis",
@@ -345,7 +345,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Wen, X., S.H. Chung, T.M. Choi, X. Fu. Airline cabin crew pairing with accurate characterization of cross-class substitution: A branch-and-price approach. Transportation Research Part B: Methodological, 190 103084, Dec 2024.",
     "journal": "Transportation Research Part B",
@@ -353,7 +353,7 @@
     "area": "none"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Fang, C., M. Chi, S. Fan, T.M. Choi. Who should invest in blockchain technology under different pricing models in supply chains. European Journal of Operational Research, 319(3), 777-792, Dec 2024.",
     "journal": "European Journal of Operational Research",
@@ -361,7 +361,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Xu, X., Y. Wang, T.C.E. Cheng, T.M. Choi. Should live broadcasting platforms adopt artificial intelligence? A sales effort perspective. European Journal of Operational Research, 318(3), 979-999, Nov 2024.",
     "journal": "European Journal of Operational Research",
@@ -369,7 +369,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Wu, L., M. Wang, A. Kumar, T.M. Choi. Mitigating the bullwhip effect through supply chain ESG transparency: Roles of digitalization and signal strength. International Journal of Operations and Production Management, 44 (9), 1707-1731, Sep 2024.",
     "journal": "International Journal of Operations and Production Management",
@@ -377,7 +377,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Xu, X., X. Chen, T.M. Choi, T.C.E. Cheng. Platform financing versus bank financing: When to choose which for green production systems. European Journal of Operational Research, 317(2), 515-523, Sep 2024.",
     "journal": "European Journal of Operational Research",
@@ -385,7 +385,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "De Bock, K. W., K. Coussement, A.D. Caigny, R. Słowiński, B. Baesens, R. N. Boute, T.M. Choi, . . . Weber, R. Explainable AI for Operational Research: A defining framework, methods, applications, and a research agenda. European Journal of Operational Research, 317(2), 249-272, Sep 2024.",
     "journal": "European Journal of Operational Research",
@@ -393,7 +393,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Biswas, I., G. Singh, S. Tiwari, T.M. Choi, S. Pethe. Managing Industry 4.0 supply chains with innovative and traditional products: contract cessation points and value of information. European Journal of Operational Research, 316(2),539-555, July 2024.",
     "journal": "European Journal of Operational Research",
@@ -401,7 +401,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Wei, S., W. Liu, T.M. Choi, J. Dong, S. Long. The influence of key components and digital technologies on manufacturer's choice of innovation strategy. European Journal of Operational Research, 315(3), 1210-1220, June 2024.",
     "journal": "European Journal of Operational Research",
@@ -409,7 +409,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Zhang, K., T.M, Choi, S.H. Chung, Y. Dai, X. Wen. Blockchain adoption in retail operations: Stablecoins and traceability. European Journal of Operational Research, 315(1), 147-160, May 2024.",
     "journal": "European Journal of Operational Research",
@@ -417,7 +417,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Mandal, P., P. Basu, T.M. Choi, S.B. Rath. Platform financing vs. bank financing: Strategic choice of financing mode under seller competition. European Journal of Operational Research, 315(1), 130-146, May 2024.",
     "journal": "European Journal of Operational Research",
@@ -426,7 +426,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Liu, W., Z. Chen, T.M. Choi, P.T.W. Lee, H.K. Chan, Y. Gao. Carbon neutral announcements and Chinese stock market reaction: A supply chain network-based perspective. International Journal of Operations and Production Management, 44(4), 729-767, 2024.",
     "journal": "International Journal of Operations and Production Management",
@@ -434,7 +434,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Dou, G., T.M. Choi. Compete or cooperate? Effects of channel relationships on government policies for sustainability. European Journal of Operational Research, 313 (2), 718-732, Mar 2024.",
     "journal": "European Journal of Operational Research",
@@ -442,7 +442,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Dixit, A., T.M. Choi, P. Kumar, S.K. Jakhar. Roles of reciprocity and fairness concerns in airline-airport systems with environmental considerations. European Journal of Operational Research, 312(3), 1011-1034, Feb 2024.",
     "journal": "European Journal of Operational Research",
@@ -450,7 +450,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Wang, A.X., T.M. Choi, L.C. Wood, K. Olesen, T. Reiners. When suppliers engage in sustainable supply chain management: How does the stock market react? International Journal of Operations and Production Management, 44(3), 699-727, 2024.",
     "journal": "International Journal of Operations and Production Management",
@@ -458,7 +458,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Guo, S., T.M. Choi. Risk management for second-hand clothing imports in least-developed countries: Legislations and perception of public-sector corruption. Risk Analysis, 44(1), 108-125, 2024.",
     "journal": "Risk Analysis",
@@ -466,7 +466,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2024,
     "citation": "Zhang, T., T.M. Choi, T.C.E. Cheng. Competitive pricing and product strategies in the presence of consumers’ social comparisons. European Journal of Operational Research, 312(2), 573-586, Jan 2024.",
     "journal": "European Journal of Operational Research",
@@ -474,7 +474,7 @@
     "area": "ops-marketing"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Cao, K.Y., Y. Xu, Z.S. Hua, T.M. Choi. To be a “supplier” or “co-optor”: Optimal channel and logistics selection problems on giant platforms. European Journal of Operational Research, 311(3), 971-988, Dec 2023.",
     "journal": "European Journal of Operational Research",
@@ -482,7 +482,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Tang, F., Z. Ma, Y. Dai, T.M. Choi. Trade-in operations under retail competition: Effects of brand loyalty. European Journal of Operational Research, 310(1), 397-414, Oct 2023.",
     "journal": "European Journal of Operational Research",
@@ -490,7 +490,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Xu, X., L. Yan, T.M. Choi, T.C.E. Cheng. When is it wise to use blockchain for platform operations with remanufacturing? European Journal of Operational Research, 309 (3), 1073-1090, Sep 2023.",
     "journal": "European Journal of Operational Research",
@@ -498,7 +498,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Zheng, M., S. Song, Y. Zhou, T.M. Choi. Sourcing decisions with uncertain time-dependent supply from an unreliable supplier. European Journal of Operational Research, 308(3), 1365-1379, Aug 2023.",
     "journal": "European Journal of Operational Research",
@@ -506,7 +506,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Yadav, S., T.M. Choi, A. Kumar, S. Luthra, F. Naz. A meta-analysis of sustainable supply chain practices and performance: The moderating roles of type of economy and innovation. International Journal of Operations and Production Management, 43(5), 802-845, 2023.",
     "journal": "International Journal of Operations and Production Management",
@@ -514,7 +514,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Choi, T.M., T. Zhang. Will being an angel bring more harm than good? Altruistic newsvendors with different risk attitudes. European Journal of Operational Research, 305 (3), 1153-1165, Mar 2023.",
     "journal": "European Journal of Operational Research",
@@ -522,7 +522,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Lin, J., T.M. Choi, Y.H. Kuo. Will providing return-freight-insurances do more good than harm to dual-channel e-commerce retailers? European Journal of Operational Research, 307 (3), 1225-1239, 2023.",
     "journal": "European Journal of Operational Research",
@@ -530,7 +530,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2023,
     "citation": "Liu, W., X. Liu, T.M. Choi. Effects of supply chain quality event announcements on stock market reaction: An empirical study from China. International Journal of Operations and Production Management, 43(2), 197-234, 2023.",
     "journal": "International Journal of Operations and Production Management",
@@ -538,7 +538,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2022,
     "citation": "Hosseini-Motlagh, S.M., T.M. Choi, M. Johari, M. Nouri-Harzvili. A profit surplus distribution mechanism for supply chain coordination: An evolutionary game-theoretic analysis. European Journal of Operational Research, 301(2), 561-575, 2022.",
     "journal": "European Journal of Operational Research",
@@ -546,7 +546,7 @@
     "area": "coordination"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2022,
     "citation": "Liu, W., J. Wang, F. Jia, T.M. Choi. Blockchain announcements and stock value: A technology management perspective. International Journal of Operations and Production Management, 42(5), 713-724, 2022.",
     "journal": "International Journal of Operations and Production Management",
@@ -554,7 +554,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2022,
     "citation": "Guo, S., T.M. Choi, S.H. Chung. Self-design fun: Should 3D printing be employed in mass customization operations? European Journal of Operational Research, 299(3), 883-897, 2022.",
     "journal": "European Journal of Operational Research",
@@ -562,7 +562,7 @@
     "area": "tech"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2022,
     "citation": "Liu, W., W. Wei, T.M. Choi, X. Yan. The impact of leadership on CSR management in multi-tier supply chains. European Journal of Operational Research, 299(2), 483-496, 2022.",
     "journal": "European Journal of Operational Research",
@@ -570,7 +570,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2022,
     "citation": "Cai, Y.J., T.M. Choi, T. Zhang. Commercial used apparel collection operations in retail supply chains. European Journal of Operational Research, 298(1), 169-181, 2022.",
     "journal": "European Journal of Operational Research",
@@ -578,7 +578,7 @@
     "area": "sustainability"
   },
   {
-    "category": "Other ABS 4* journals",
+    "category": "Other ABS 4 journals",
     "year": 2022,
     "citation": "Cai, Y.J., T.M. Choi, L. Feng, Y. Li. Producer’s choice of design-for-environment under environmental taxation. European Journal of Operational Research, 297(2), 532-544, 2022.",
     "journal": "European Journal of Operational Research",

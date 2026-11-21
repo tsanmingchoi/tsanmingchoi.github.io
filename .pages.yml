@@ -83,7 +83,7 @@ content:
         label: Category
         type: select
         options:
-          values: ["UTD24 / FT50 journals", "Other ABS 4* journals", "Other selected journals", "Books"]
+          values: ["UTD24 / FT50 journals", "Other ABS 4 journals", "Other selected journals", "Books"]
       - { name: year, label: Year, type: number }
       - { name: citation, label: Full citation, type: text }
       - { name: journal, label: Journal name (for the filter), type: string }

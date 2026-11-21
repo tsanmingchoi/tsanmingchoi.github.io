@@ -96,7 +96,8 @@ Limits to know:
 - Running `python scripts/sync_publications.py` on your own computer (then committing and pushing)
   also works, because Google rarely blocks home connections.
 - New papers appear in OpenAlex and Scholar a few days to a few weeks after publication.
-- The sync guesses the category from the journal name (UTD24/FT50, ABS 4*, other). He can change
+- The sync sets the category from the journal's ABS rank and FT50 status in the Journal Ranking
+  Finder data (https://mayukhpsm.github.io/journalrankingfinder/): UTD24/FT50, ABS 4, other. He can change
   the category of any entry in the editor.
 - GitHub pauses scheduled jobs in repositories with no activity for 60 days. If the weekly job is
   paused, Actions → Sync publications → *Enable workflow*.

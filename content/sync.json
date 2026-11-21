@@ -5,5 +5,8 @@
   "auto_add_from_year": 2026,
   "update_metrics": true,
   "exclude_titles": [],
-  "exclude_venues": ["Encyclopedia in Operations Management"]
+  "exclude_venues": [
+    "Encyclopedia in Operations Management",
+    "Lecture notes"
+  ]
 }

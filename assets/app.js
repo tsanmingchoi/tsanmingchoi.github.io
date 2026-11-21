@@ -204,7 +204,7 @@ function renderNews({ news }) {
 }
 
 // Publications ---------------------------------------------------------------
-const CATS = ["UTD24 / FT50 journals", "Other ABS 4* journals", "Other selected journals", "Books"];
+const CATS = ["UTD24 / FT50 journals", "Other ABS 4 journals", "Other selected journals", "Books"];
 const NAME_RE = /(T\.?\s?-?\s?M\.?,?\s?Choi|TM Choi|Choi,?\s?T\.(?:\s?-?\s?M\.)?|Choi,?\s?T\.?\s?M\.?)/g;
 const pubState = { cat: "All", q: "", journal: "", all: false };
 
