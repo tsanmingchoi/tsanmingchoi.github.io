@@ -43,9 +43,7 @@ ABS4 = {
     "european journal of operational research", "british journal of management", "risk analysis",
     "international journal of operations & production management",
     "international journal of operations and production management",
-    "transportation research part b", "transportation research part b: methodological",
-    "transportation research part b methodological",
-    "journal of supply chain management", "transportation science",
+    "journal of supply chain management",
 }
 TOP_GROUP, ABS4_GROUP, OTHER_GROUP = "UTD24 / FT50 journals", "Other ABS 4 journals", "Other selected journals"
 KEEP_TYPES = {"article", "review", "book", "book-chapter"}
