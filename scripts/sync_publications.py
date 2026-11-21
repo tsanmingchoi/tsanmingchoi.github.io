@@ -44,6 +44,9 @@ ABS4 = {
     "international journal of operations & production management",
     "international journal of operations and production management",
     "journal of supply chain management",
+    # ABS 4, but missing from the Journal Ranking Finder data, so it is listed here
+    "transportation research part b", "transportation research part b: methodological",
+    "transportation research part b methodological",
 }
 TOP_GROUP, ABS4_GROUP, OTHER_GROUP = "UTD24 / FT50 journals", "Other ABS 4 journals", "Other selected journals"
 KEEP_TYPES = {"article", "review", "book", "book-chapter"}
