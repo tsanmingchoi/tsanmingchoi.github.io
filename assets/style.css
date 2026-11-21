@@ -240,9 +240,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .reel-list .bar::after { content: ""; position: absolute; inset: 0; background: var(--teal); transform: scaleX(0); transform-origin: left; }
 .reel-list button.on .bar::after { animation: fill 6s linear forwards; }
 .photo-card { margin: 0; position: relative; }
-.photo-card::before { content: ""; position: absolute; inset: 22px -22px -22px 22px; background: var(--teal); border-radius: var(--radius); z-index: -1; }
-.photo-card img { border-radius: var(--radius); box-shadow: var(--shadow-lg); width: 100%; aspect-ratio: 1; object-fit: cover; }
-.photo-card figcaption { margin-top: 34px; font-size: 13px; color: var(--muted); }
+.photo-card img { border-radius: var(--radius); box-shadow: 22px 22px 0 var(--teal), var(--shadow-lg); width: 100%; aspect-ratio: 1; object-fit: cover; }
+.photo-card figcaption { margin-top: 40px; font-size: 14px; color: var(--ink-soft); }
 
 /* Journey */
 .journey { position: relative; margin-top: 30px; }
@@ -545,7 +544,8 @@ figure.fig figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
   .page-head { padding: 60px 0 54px; }
   .covers-row, .areas, .news, .team-groups, .highlights, .courses { grid-template-columns: 1fr; }
   .journey ol { grid-template-columns: 1fr; }
-  .photo-card::before { inset: 14px -10px -14px 14px; }
+  .photo-card img { box-shadow: 12px 12px 0 var(--teal), var(--shadow-lg); }
+  .photo-card figcaption { margin-top: 28px; }
   .filters, .filters input, .filters select { width: 100%; max-width: none; }
   .bars { gap: 8px; height: 120px; }
   .chart-stats strong { font-size: 40px; }
