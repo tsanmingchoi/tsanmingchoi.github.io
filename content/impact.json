@@ -1,7 +1,7 @@
 {
   "metrics": [
     {
-      "value": "41,853",
+      "value": "42,023",
       "label": "Google Scholar citations"
     },
     {
@@ -113,5 +113,5 @@
       "caption": ""
     }
   ],
-  "metrics_updated": "16 November 2026"
+  "metrics_updated": "23 November 2026"
 }
