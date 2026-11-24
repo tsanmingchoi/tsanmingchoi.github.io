@@ -1,0 +1,28 @@
+{
+  "last_run": "2026-11-24",
+  "sections": {
+    "home": "ok",
+    "team": "ok",
+    "teaching": "ok",
+    "services": "ok",
+    "funding": "ok",
+    "announcements": "no page"
+  },
+  "last_change": "2026-11-24",
+  "changes": [
+    "Home: portrait photo changed",
+    "Home: positions updated",
+    "Home: address updated",
+    "Home: profile links updated",
+    "Team: added Shuyi Fan",
+    "Team: photos updated",
+    "Services: roles updated",
+    "Services: images updated",
+    "Funding: projects updated",
+    "Impact: highlights updated",
+    "Impact: badge image changed",
+    "Impact: photos updated",
+    "Latest updates: cards from the Google Site updated"
+  ],
+  "problems": []
+}

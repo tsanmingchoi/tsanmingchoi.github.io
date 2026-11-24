@@ -298,6 +298,9 @@ function renderRest({ team, impact, teaching, service, profile: p }) {
   $("team-photos").innerHTML = `<div class="pm-track">${photos}${photos}</div>`;
 
   $("highlights").innerHTML = impact.highlights.map((h, i) => `<li class="reveal" style="--stagger:${i}">${esc(h)}</li>`).join("");
+  $("impact-badge").hidden = !impact.badge;
+  $("impact-badge").innerHTML = impact.badge ? `<img src="${esc(impact.badge)}" alt="Clarivate Highly Cited Researcher badge" loading="lazy">` : "";
+  $("impact-photos").innerHTML = (impact.photos || []).map((x) => figure(x)).join("");
   $("projects").innerHTML = [...impact.projects].sort((a, b) => b.year - a.year).map((pr) => `
     <li class="project reveal"><span class="yr">${esc(pr.year)}</span>
       <div><h4>${esc(pr.title)}</h4><p>${esc(pr.amount)} · ${esc(pr.funder)}${pr.note ? ` · ${esc(pr.note)}` : ""}</p></div>

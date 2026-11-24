@@ -1,0 +1,48 @@
+name: Sync from Google Site
+
+# Every day 05:00 UTC, plus a "Run workflow" button on the Actions tab
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Never run at the same time as the publication sync (both save to main)
+concurrency:
+  group: content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read Prof. Choi's Google Site
+        id: read
+        continue-on-error: true
+        run: python scripts/sync_google_site.py
+      - name: Save changes
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain content images)" ]; then
+            git config user.name "google-site-sync"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add content images
+            git commit -m "Daily Google Site sync"
+            git pull --rebase origin main
+            git push
+          else
+            echo "Nothing changed on the Google Site."
+          fi
+      # A section that could not be read makes the run fail, so GitHub sends an email.
+      # The website keeps its last good version of that section.
+      - name: Report sections that could not be read
+        if: steps.read.outcome == 'failure'
+        run: |
+          echo "::error::Some Google Site sections could not be read. See content/gsite_status.json."
+          exit 1

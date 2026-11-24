@@ -84,6 +84,11 @@
       "title": "Visiting PhD students (current)",
       "members": [
         {
+          "name": "Shuyi Fan",
+          "note": "",
+          "linkedin": ""
+        },
+        {
           "name": "Hannah Guo",
           "note": "",
           "linkedin": "https://www.linkedin.com/in/yuhan-guo-202a313aa/"
@@ -148,19 +153,19 @@
   ],
   "photos": [
     {
-      "image": "images/team-1.jpg",
-      "caption": "My team after the RSG meeting at ULMS (Feb 2024)"
+      "image": "images/gsite/team-ac3f7eff2c9e.jpg",
+      "caption": "My team, after RSG meeting at ULMS (Feb 2024)"
     },
     {
-      "image": "images/team-2.jpg",
+      "image": "images/gsite/team-11e28d091b61.jpg",
       "caption": "After the seminar (Jun 2025)"
     },
     {
-      "image": "images/team-3.jpg",
+      "image": "images/gsite/team-9c7ece325ff0.jpg",
       "caption": "Christmas lunch gathering (Dec 2024)"
     },
     {
-      "image": "images/team-4.jpg",
+      "image": "images/gsite/team-6a9e867c94f8.jpg",
       "caption": "Christmas lunch meeting (Nov 2025)"
     }
   ]

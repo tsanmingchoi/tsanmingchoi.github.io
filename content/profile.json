@@ -2,10 +2,10 @@
   "name": "Tsan-Ming Choi",
   "preferred_name": "Jason",
   "credentials": "PhD, Professor",
-  "photo": "images/home-1.jpg",
+  "photo": "images/gsite/portrait-5603d492abda.jpg",
   "positions": [
     "Chair in Operations and Supply Chain Management",
-    "Director of the Centre for Supply Chain Research (CSCR)"
+    "Director of the Centre for Supply Chain Research"
   ],
   "affiliation": "University of Liverpool Management School",
   "tagline_prefix": "Shaping supply chains that are",
@@ -61,11 +61,19 @@
       "note": "Chair in OSCM and Director of CSCR"
     }
   ],
-  "last_updated": "January 2026",
+  "last_updated": "24 November 2026",
   "email": "t.m.choi@liverpool.ac.uk",
   "phone": "+44 (0)151 794 0434",
-  "address": "Centre for Supply Chain Research, University of Liverpool Management School, Chatham Building, Liverpool L69 7ZH, United Kingdom",
+  "address": "Centre for Supply Chain Research, University of Liverpool Management School, Chatham Building, Liverpool L69 7ZH, the United Kingdom",
   "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/tsan-ming-jason-choi-29035440/"
+    },
+    {
+      "label": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Tsan-Ming-Choi"
+    },
     {
       "label": "Google Scholar",
       "url": "https://scholar.google.com/citations?user=YdR1998AAAAJ&hl"
@@ -73,14 +81,6 @@
     {
       "label": "ORCID",
       "url": "https://orcid.org/0000-0003-3865-7043"
-    },
-    {
-      "label": "ResearchGate",
-      "url": "https://www.researchgate.net/profile/Tsan-Ming-Choi"
-    },
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/tsan-ming-jason-choi-29035440/"
     },
     {
       "label": "ULMS profile",
